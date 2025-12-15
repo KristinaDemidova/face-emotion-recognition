@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Распознавание эмоций по изображениям лиц</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Распознавание эмоций по изображениям лиц 📸</h1>
+
+        <div class="file-input-wrapper">
+            <input type="file" id="fileInput" accept="image/*">
+            <label for="fileInput">Выбрать изображение</label>
+        </div>
+
+        <div class="preview">
+            <img id="previewImage" alt="Превью">
+        </div>
+
+        <button class="analyze-btn" id="analyzeBtn" disabled>
+            Запустить распознавание
+        </button>
+
+        <div class="loading" id="loading"></div>
+
+        <div class="result" id="result">
+            <h2>Результат:</h2>
+
+            <div class="result-image">
+                <img id="resultImage" alt="Результат">
+            </div>
+
+            <p id="caption"></p>
+        </div>
+
+        <div class="error" id="error"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+services:
+  ml-service:
+    build: ml-service
+    container_name: ml-service
+    ports:
+      - "8001:8001"
+    environment:
+      - TRANSFORMERS_CACHE=/app/.cache
+    volumes:
+      - ml-cache:/app/.cache
+
+  backend:
+    build: backend
+    container_name: backend
+    ports:
+      - "8000:8000"
+    depends_on:
+      - ml-service
+
+  frontend:
+    build: frontend
+    container_name: frontend
+    ports:
+      - "80:80"
+    depends_on:
+      - backend
+
+volumes:
+  ml-cache:
