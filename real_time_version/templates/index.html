@@ -1,0 +1,33 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Детекция эмоций в реальном времени</title>
+    <!-- Ссылка на файл со стилями -->
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <h1>Детекция эмоций в реальном времени</h1>
+
+    <div class="video-grid">
+        <div class="video-container">
+            <h2>Видео с камеры</h2>
+            <video id="video-feed" autoplay playsinline muted></video>
+        </div>
+        <div class="video-container">
+            <h2>Обработанное видео</h2>
+            <canvas id="processed-canvas"></canvas>
+        </div>
+    </div>
+
+    <div id="controls">
+        <button id="start-btn">Старт</button>
+        <button id="stop-btn" disabled>Стоп</button>
+    </div>
+
+    <!-- Ссылка на файл со скриптом. 'defer' гарантирует, что скрипт выполнится после загрузки HTML. -->
+    <script src="/static/script.js" defer></script>
+</body>
+</html>
